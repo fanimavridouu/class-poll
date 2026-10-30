@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="el">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Επιλογή Θέματος Εργασίας</title>
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+  <body>
+    <div class="hero">
+      <div class="wrap">
+        <h1>Επιλογή Θέματος Εργασίας</h1>
+        <p>Διάλεξε ένα θέμα για την εργασία σου. Κάθε θέμα έχει μόνο 4 θέσεις και η επιλογή είναι οριστική.</p>
+      </div>
+    </div>
+    <main class="wrap">
+      <section class="card">
+        <div id="alerts"></div>
+        <div id="form-card">
+          <h2>Δήλωση συμμετοχής</h2>
+          <div class="notice">Συμπλήρωσε το πραγματικό ονοματεπώνυμό σου. Δεν μπορείς να αλλάξεις θέμα μετά την υποβολή.</div>
+          <form id="signup-form" novalidate>
+            <div class="hp" aria-hidden="true">
+              <label for="website">Ιστοσελίδα</label>
+              <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
+            </div>
+            <div class="field">
+              <label for="first">Όνομα</label>
+              <input id="first" name="first" type="text" maxlength="50" required minlength="1" autocomplete="given-name" placeholder="π.χ. Μαρία">
+            </div>
+            <div class="field">
+              <label for="last">Επώνυμο</label>
+              <input id="last" name="last" type="text" maxlength="50" required minlength="1" autocomplete="family-name" placeholder="π.χ. Παπαδοπούλου">
+            </div>
+            <label>Διάλεξε ένα θέμα</label>
+            <div id="topics"></div>
+            <button id="submit-btn" type="submit">Οριστική επιλογή θέματος</button>
+          </form>
+        </div>
+        <div id="success" class="notice success hidden">
+          <h2>Η επιλογή σου καταχωρίστηκε!</h2>
+          <p><strong id="success-name"></strong>, επέλεξες: <strong id="success-topic"></strong>.</p>
+          <p>Κράτησε αυτή την επιβεβαίωση.</p>
+          <a class="button" href="index.html">Επιστροφή στην αρχική</a>
+        </div>
+      </section>
+      <p class="foot">Δεν απαιτείται εγγραφή ή εγκατάσταση εφαρμογής.</p>
+    </main>
+    <script src="config.js"></script>
+    <script src="js/normalize.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

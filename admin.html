@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="el">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Αποτελέσματα — Επιλογή Θέματος</title>
+    <link rel="stylesheet" href="css/app.css">
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+  </head>
+  <body>
+    <div class="hero">
+      <div class="wrap">
+        <h1>Αποτελέσματα</h1>
+        <p>Μόνο ο διαχειριστής βλέπει τις δηλώσεις και κατεβάζει το Excel. Μην στείλεις αυτή τη σελίδα στην τάξη.</p>
+      </div>
+    </div>
+    <main class="wrap">
+      <section class="card">
+        <div id="alerts"></div>
+        <div id="signed-out">
+          <h2>Είσοδος διαχειριστή</h2>
+          <p class="notice">Συνδέσου με τον επιτρεπόμενο λογαριασμό Google.</p>
+          <div id="googleSignIn"></div>
+        </div>
+        <div id="signed-in" class="hidden">
+          <h2>Δηλώσεις</h2>
+          <div class="admin-toolbar">
+            <button id="export-btn" type="button">Λήψη Excel</button>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th>Θέμα</th>
+                <th>Όνομα</th>
+                <th>Επώνυμο</th>
+                <th>Χρόνος (UTC)</th>
+              </tr>
+            </thead>
+            <tbody id="results-body"></tbody>
+          </table>
+        </div>
+      </section>
+      <p class="foot"><a href="index.html">Επιστροφή στη φόρμα</a></p>
+    </main>
+    <script src="config.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/admin.js"></script>
+  </body>
+</html>
